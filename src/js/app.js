@@ -1,6 +1,18 @@
-// TODO: write your code here
-import sum from './basic';
+export let heroHealthColor;
 
-console.log('worked');
+export function showHealthColor(hero) {
+    if(hero.health > 50){
+        heroHealthColor = 'green';
+        return 'healthy';
+    } else if(hero.health <= 50 && hero.health >= 15){
+        heroHealthColor = 'yellow';
+        return 'wounded';
+    } else if(hero.health < 15){
+        heroHealthColor = 'red';
+        return 'critical';
+    }
+}
 
-console.log(sum([1, 2]));
+export function sortByHealth(heroList){
+    return heroList.sort((a, b) => a.health - b.health);
+}
