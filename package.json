@@ -1,7 +1,7 @@
 {
   "name": "ajs",
   "version": "1.0.0",
-  "main": "app.js",
+  "main": "src/js/app.js",
   "scripts": {
     "start": "webpack serve --mode development --entry ./app.js",
     "build": "webpack --mode production --entry ./app.js",
